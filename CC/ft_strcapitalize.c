@@ -9,11 +9,19 @@ char* ft_strcapitalize(char* str)
 	idx = 0;
 	while (*c)
 	{
-		if (idx == 0 && (*c >= 'a' && *c <= 'z'))
-			*c -= 32;
+		if (idx == 0)
+		{
+			if (*c >= 'a' && *c <= 'z')
+			{
+				*c -= 32;
+				idx++;
+			}
+		}
 		else if (!((*c >= 'a' && *c <= 'z') || (*c >= 'A' && *c <= 'Z')))
 			idx = 0;
-		printf("%c", *c);
+		else
+			idx++;
+		// printf("%c", *c);
 		c++;
 	}
 	return (str);
