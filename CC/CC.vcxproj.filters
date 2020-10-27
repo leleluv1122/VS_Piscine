@@ -60,5 +60,8 @@
     <ClCompile Include="ft_strlcpy.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="ft_strcmp.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
