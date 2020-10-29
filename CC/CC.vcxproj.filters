@@ -63,5 +63,11 @@
     <ClCompile Include="ft_strcmp.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="ft_strncmp.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ft_atoi_base.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

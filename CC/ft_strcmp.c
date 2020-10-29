@@ -1,26 +1,14 @@
 #include <string.h>
 #include <stdio.h>
 
-int ft_strcmp(char* s1, char* s2)
+int	ft_strcmp(char* s1, char* s2)
 {
-	int		idx;
+	int i;
 
-	idx = 0;
-	while (1)
-	{
-		if (s1[idx] == '\0' && s2[idx] == '\0')
-			break ;
-		else if (s1[idx] == '\0')
-			return (-1);
-		else if (s2[idx] == '\0')
-			return (1);
-		if (s1[idx] > s2[idx])
-			return (1);
-		else if (s1[idx] < s2[idx])
-			return (-1);
-		idx++;
-	}
-	return (0);
+	i = 0;
+	while (s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0')
+		i++;
+	return (s1[i] - s2[i]);
 }
 
 int main() {
@@ -34,9 +22,8 @@ int main() {
 	char d3[] = "AB";
 
 	printf("%d %d\n", ft_strcmp(d1, d2), ft_strcmp(d1, d3));
-	// -1 1
 
-	printf("%d ,", ft_strcmp(s1, s2)); // 0
-	printf("%d ,", ft_strcmp(s1, s3)); // -1
-	printf("%d", ft_strcmp(s1, s4));   // 1
+	printf("%d ,", ft_strcmp(s1, s2));
+	printf("%d ,", ft_strcmp(s1, s3));
+	printf("%d", ft_strcmp(s1, s4));
 }
